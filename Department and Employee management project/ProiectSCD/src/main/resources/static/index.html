@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Frontend</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <script>
+    </script>
+</head>
+
+<body>
+<h1>Frontend Department and Employees Management</h1>
+<hr>
+<div class="data-form">
+        <div>
+            <label>Name</label>
+            <input type="text" name="name" id="name">
+        </div>
+        <div>
+            <label>Email</label>
+            <input type="text" name="email" id="email">
+        </div>
+        <div>
+            <label>Department Id</label>
+            <input type="number" name="departmentId" id="departmentId">
+        </div>
+        <div>
+            <label>Manager Id</label>
+            <input type="number" name="managerId" id="managerId">
+        </div>
+        <div class="form-buttons">
+            <button type="button" onclick="addEmployee()">Add Employee</button>
+            <button type="button" onclick="getEmployees()">View all Employees</button>
+            <button type="button" >Modify Employee</button>
+            <button type="button" onclick="deleteEmployee()">Delete Employee by Id</button>
+        </div>
+    <div>
+        <label>Id To Delete</label>
+        <input type="number" name="id2" id="id_delete2">
+    </div>
+</div>
+<div class = "data-table">
+    <table class="list" id="employeeTable">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Department ID</th>
+            <th>Manager ID</th>
+            <th>Email</th>
+            <th>ID</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</div>
+
+<div class="data-form">
+        <div>
+            <label>Description</label>
+            <input type="text" name="description" id="description">
+        </div>
+        <div>
+            <label>Parent ID</label>
+            <input type="number" name="parentId" id="parentId">
+        </div>
+
+        <div  class="form-buttons">
+            <button type="button" onclick="addDepartment()">Add Department</button>
+            <button type="button" onclick="getDepartments()">View all Departments</button>
+            <button type="button" onclick="modifyDepartment('id')">Modify Departments</button>
+            <button type="button" onclick="deleteDepartment()">Delete Department</button>
+
+        </div>
+    <div>
+        <label>Id To Delete</label>
+        <input type="number" name="id" id="id_delete">
+    </div>
+
+</div>
+<br/>
+<div class = "data-table">
+    <table class="list" id="departmentTable">
+        <thead>
+        <tr>
+            <th>Description</th>
+            <th>Parent ID</th>
+            <th>ID</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</div>
+<script src="js/employee.js"></script>
+<script src="js/department.js"></script>
+</body>
+</html>
